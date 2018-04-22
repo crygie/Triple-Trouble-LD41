@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/shitty spikes.png-3e27ba4dc3b3e7da701b64320a46d65e.stex"
+
+[deps]
+
+source_file="res://sprites/Tiles/shitty spikes.png"
+source_md5="91c5b60bde71e14b42d811abdcf68f54"
+
+dest_files=[ "res://.import/shitty spikes.png-3e27ba4dc3b3e7da701b64320a46d65e.stex" ]
+dest_md5="a89bc36aac6b8b3a07b3bc7cfdbccd64"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Image6 64x64.png-a837e2db37f28a1c0992a92aaa5dd5a0.stex"
+
+[deps]
+
+source_file="res://sprites/Player/Image6 64x64.png"
+source_md5="867c3c5c05496a9f80d875eba44a0bd4"
+
+dest_files=[ "res://.import/Image6 64x64.png-a837e2db37f28a1c0992a92aaa5dd5a0.stex" ]
+dest_md5="e33c706c4aeb4c9631afb850c4d1abfd"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
