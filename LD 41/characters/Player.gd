@@ -7,6 +7,7 @@ const UP = Vector2(0, -1)
 
 var movement = Vector2()
 var isDead = false
+var keyGot = false
 
 func _ready():
 	add_to_group("player")
@@ -14,6 +15,7 @@ func _ready():
 func death():
 	isDead = true
 	hide()
+	queue_free()
 
 func jump():
 	movement.y = -JUMP_H
