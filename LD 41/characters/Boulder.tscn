@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Boulder.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Traps/temp saw.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 31.2266
@@ -16,7 +16,6 @@ extents = Vector2( 0.111766, 3.3378 )
 [node name="Temp Spike" type="RigidBody2D"]
 
 position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -36,12 +35,13 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.707031, 0, 0, 1 )
-position = Vector2( -9.53674e-07, 9.53674e-07 )
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0.261002, 0.206704 )
+scale = Vector2( 1.91406, 1.90625 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
@@ -58,7 +58,7 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 position = Vector2( 0.0595627, -0.0574188 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]

@@ -15,7 +15,8 @@ func _ready():
 func death():
 	isDead = true
 	hide()
-	queue_free()
+	get_tree().reload_current_scene()
+	#queue_free()
 
 func jump():
 	movement.y = -JUMP_H
@@ -26,11 +27,9 @@ func jump_cut():
 
 
 func _physics_process(delta):
-	#print (movement.y)
 	if !isDead:
 		if Input.is_action_pressed("move_right"):
 			if !is_on_floor() && movement.x < 0:
-				#movement.x = SPEED - (movement.x * 4)
 				movement.x = 0
 			else:
 				movement.x = SPEED

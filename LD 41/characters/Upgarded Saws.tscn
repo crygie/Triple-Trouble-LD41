@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Path2D.gd" type="Script" id=1]
+[ext_resource path="res://characters/Saw.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/Saw.gd" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -4.08118, 9.52261, 0, 0, 0, 0, -4.08118, -246.228, 0, 0, 0, 0, -4.08118, 10.883 )
+}
+
+[node name="Path2D" type="Path2D"]
+
+editor/display_folded = true
+position = Vector2( 411.848, 308.788 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+saw_speed = 200
+
+[node name="test" type="PathFollow2D" parent="." index="0"]
+
+position = Vector2( -4.08118, 9.52261 )
+rotation = -1.5708
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Saw" type="StaticBody2D" parent="test" index="0" instance=ExtResource( 2 )]
+
+scale = Vector2( 2, 2 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+

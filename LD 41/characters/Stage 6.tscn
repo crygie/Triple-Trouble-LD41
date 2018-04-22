@@ -1,0 +1,246 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://JungleTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://characters/Pit Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Spike-AllDeath.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/Break Block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/BlockThatIsKikkedByBoulder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/Upgarded Saws.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/BoulderTrigger.gd" type="Script" id=8]
+[ext_resource path="res://characters/Boulder.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 40.5, 6.22766 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 60.5 )
+
+[node name="Stage 6" type="Node" index="0"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 959, 473 )
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+position = Vector2( -96, -32 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -196604, 1, 0, -196603, 1, 0, -196602, 1, 0, -131068, 1, 0, -131066, 1, 0, -65532, 1, 0, -65530, 1, 0, 4, 1, 0, 6, 1, 0, 65539, 1, 0, 65540, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 1, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 131075, 1, 0, 196611, 1, 0, 262147, 1, 0, 327683, 1, 0, 327713, 1, 0, 327714, 1, 0, 393219, 1, 0, 393248, 1, 0, 393249, 1, 0, 393250, 1, 0, 458755, 1, 0, 458786, 1, 0, 524291, 1, 0, 524322, 1, 0, 589827, 1, 0, 589858, 1, 0, 655363, 1, 0, 655394, 1, 0, 720899, 1, 0, 720903, 1, 0, 720930, 1, 0, 786435, 1, 0, 786466, 1, 0, 851971, 1, 0, 852002, 1, 0, 917507, 1, 0, 917539, 1, 0, 983043, 1, 0, 983075, 1, 0, 1048579, 1, 0, 1048603, 1, 0, 1048611, 1, 0, 1114115, 1, 0, 1114143, 1, 0, 1114144, 1, 0, 1114145, 1, 0, 1114146, 1, 0, 1179651, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179679, 1, 0, 1179680, 1, 0, 1179681, 1, 0, 1179682, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pit Trap" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Spikes" type="Node" parent="." index="3"]
+
+[node name="Temp Spike" parent="Spikes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 815.851, 496.396 )
+
+[node name="Temp Spike8" parent="Spikes" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 369, 559 )
+
+[node name="Temp Spike9" parent="Spikes" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 175, 337 )
+
+[node name="Temp Spike10" parent="Spikes" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 337 )
+
+[node name="Temp Spike2" parent="Spikes" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 815.772, 334.641 )
+
+[node name="Temp Spike4" parent="Spikes" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 753.911, 496.158 )
+
+[node name="Temp Spike5" parent="Spikes" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 785.762, 526.782 )
+
+[node name="Breakable Floor" type="Node" parent="." index="4"]
+
+[node name="Break Block" parent="Breakable Floor" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 667.534, 555.233 )
+
+[node name="Break Block2" parent="Breakable Floor" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 509.98, 582.738 )
+
+[node name="Break Block10" parent="Breakable Floor" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 190, 560.5 )
+
+[node name="Break Block3" parent="Breakable Floor" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 577, 408.5 )
+
+[node name="Break Block4" parent="Breakable Floor" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 766, 334.5 )
+
+[node name="Break Block5" parent="Breakable Floor" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 313, 299.5 )
+
+[node name="Break Block6" parent="Breakable Floor" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 516, 258.5 )
+
+[node name="Break Block7" parent="Breakable Floor" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 643, 179.5 )
+
+[node name="Break Block8" parent="Breakable Floor" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 832, 206.5 )
+
+[node name="Boulder Breakable Floor" type="Node" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Temp Spike2" parent="Boulder Breakable Floor" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 81, 464 )
+
+[node name="Temp Spike5" parent="Boulder Breakable Floor" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 82, 17 )
+
+[node name="Saws" type="Node" parent="." index="6"]
+
+[node name="Path2D" parent="Saws" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 420.848, 358.788 )
+saw_speed = 150
+
+[node name="Path2D2" parent="Saws" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 611.848, 300.788 )
+saw_speed = 400
+
+[node name="Path2D4" parent="Saws" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 248.848, 393.788 )
+saw_speed = 300
+
+[node name="Path2D5" parent="Saws" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 747.848, 199.788 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 400
+
+[node name="Invisible Walls" type="Node" parent="." index="7"]
+
+editor/display_folded = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Invisible Walls" index="0"]
+
+position = Vector2( 80.5, -22.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Invisible Walls/StaticBody2D" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D/Area2D" index="0"]
+
+position = Vector2( 2, 450.772 )
+scale = Vector2( 1, 2.27577 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Invisible Walls" index="1"]
+
+editor/display_folded = true
+position = Vector2( 54, 91.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D2" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Invisible Walls" index="2"]
+
+editor/display_folded = true
+position = Vector2( 108.5, 92.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D3" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="Temp Spike" parent="." index="8" instance=ExtResource( 9 )]
+
+position = Vector2( 79, -64 )
+can_sleep = false
+
+[connection signal="body_entered" from="Invisible Walls/StaticBody2D/Area2D" to="Invisible Walls/StaticBody2D" method="_on_Area2D_body_entered"]
+
+

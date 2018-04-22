@@ -32,7 +32,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.707031, 0, 0, 1 )
+modulate = Color( 0.922485, 0.0078125, 1, 1 )
 position = Vector2( -9.53674e-07, 9.53674e-07 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
