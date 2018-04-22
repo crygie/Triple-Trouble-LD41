@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Break Block.png-0b14c58c6da61235e859007fcda81e32.stex"
+
+[deps]
+
+source_file="res://sprites/Traps/Break Block.png"
+source_md5="9314ab3051afd7d5d024f2f60cfe699d"
+
+dest_files=[ "res://.import/Break Block.png-0b14c58c6da61235e859007fcda81e32.stex" ]
+dest_md5="9c051c5c40e3b5c8a16719d2741cd095"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

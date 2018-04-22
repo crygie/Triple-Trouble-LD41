@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Break Block.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Traps/Break Block.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,13 +31,15 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.03125, 1, 0, 1 )
-scale = Vector2( 0.5, 0.5 )
+modulate = Color( 0.503906, 0.503906, 0.503906, 1 )
+position = Vector2( 0.0145428, 0.513781 )
+scale = Vector2( 0.499755, 1.03211 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+visible = false
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]

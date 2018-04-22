@@ -12,4 +12,4 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("jump_key"):
 		gameTimer.gameStart = true
-		get_tree().change_scene("res://characters/Stage 1.tscn")
+		get_tree().change_scene("res://characters/Stage 0.tscn")
