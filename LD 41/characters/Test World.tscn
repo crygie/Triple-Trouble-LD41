@@ -1,10 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://JungleTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://characters/Pit Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Path2D.gd" type="Script" id=4]
+[ext_resource path="res://characters/Saw.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/Break Block.tscn" type="PackedScene" id=6]
 
-[node name="Stage 1" type="Node" index="0"]
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 224, 352, 0, 0, 0, 0, 416, 288, 0, 0, 0, 0, 224, 352 )
+}
+
+[node name="Stage 1" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -36,5 +46,29 @@ __meta__ = {
 }
 
 [node name="Pit Trap" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Path2D" type="Path2D" parent="." index="3"]
+
+position = Vector2( 352, -64 )
+curve = SubResource( 1 )
+script = ExtResource( 4 )
+
+[node name="test" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( 224, 352 )
+rotation = -0.321741
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Saw" parent="Path2D/test" index="0" instance=ExtResource( 5 )]
+
+[node name="Break Block" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 288, 416 )
 
 
