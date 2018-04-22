@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="LD 41"
-run/main_scene="res://characters/Stage 1.tscn"
+run/main_scene="res://characters/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+gameTimer="*res://Timer.gd"
 
 [display]
 

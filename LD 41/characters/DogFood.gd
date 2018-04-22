@@ -5,18 +5,15 @@ extends StaticBody2D
 # var b = "textvar"
 
 func _ready():
+	add_to_group("traps")
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-func _process(delta):
-	pass
-
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
+		body.hasDogFood = true
+		gameTimer.dogFood = gameTimer.dogFood + 1
 		hide()
 		queue_free()
+	pass

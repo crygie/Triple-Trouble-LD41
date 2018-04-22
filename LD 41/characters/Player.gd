@@ -8,18 +8,22 @@ const UP = Vector2(0, -1)
 var movement = Vector2()
 var isDead = false
 var keyGot = false
+var hasDogFood = false
 
 func _ready():
 	add_to_group("player")
 
 func death():
 	isDead = true
+	if hasDogFood:
+		gameTimer.dogFood -= 1
 	hide()
 	get_tree().reload_current_scene()
 	#queue_free()
 
 func jump():
 	movement.y = -JUMP_H
+	print(gameTimer.dogFood)
 
 func jump_cut():
 	if movement.y < -400:

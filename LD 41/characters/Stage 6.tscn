@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://JungleTileSet.tres" type="TileSet" id=2]
@@ -9,23 +9,24 @@
 [ext_resource path="res://characters/Upgarded Saws.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/BoulderTrigger.gd" type="Script" id=8]
 [ext_resource path="res://characters/Boulder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/DogFood.tscn" type="PackedScene" id=10]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40.5, 6.22766 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 60.5 )
 
-[node name="Stage 6" type="Node" index="0"]
+[node name="Stage 6" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -60,6 +61,8 @@ __meta__ = {
 
 [node name="Spikes" type="Node" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="Temp Spike" parent="Spikes" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 815.851, 496.396 )
@@ -89,6 +92,8 @@ position = Vector2( 753.911, 496.158 )
 position = Vector2( 785.762, 526.782 )
 
 [node name="Breakable Floor" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Break Block" parent="Breakable Floor" index="0" instance=ExtResource( 5 )]
 
@@ -140,6 +145,8 @@ position = Vector2( 82, 17 )
 
 [node name="Saws" type="Node" parent="." index="6"]
 
+editor/display_folded = true
+
 [node name="Path2D" parent="Saws" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 420.848, 358.788 )
@@ -164,8 +171,6 @@ saw_speed = 400
 
 [node name="Invisible Walls" type="Node" parent="." index="7"]
 
-editor/display_folded = true
-
 [node name="StaticBody2D" type="StaticBody2D" parent="Invisible Walls" index="0"]
 
 position = Vector2( 80.5, -22.5 )
@@ -180,7 +185,7 @@ script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D" index="0"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="Invisible Walls/StaticBody2D" index="1"]
 
@@ -196,7 +201,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 2, 450.772 )
 scale = Vector2( 1, 2.27577 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Invisible Walls" index="1"]
 
@@ -215,7 +220,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D2" index="0"]
 
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Invisible Walls" index="2"]
 
@@ -234,12 +239,16 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Walls/StaticBody2D3" index="0"]
 
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Temp Spike" parent="." index="8" instance=ExtResource( 9 )]
 
 position = Vector2( 79, -64 )
 can_sleep = false
+
+[node name="Temp Spike2" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 82.3301, 429.426 )
 
 [connection signal="body_entered" from="Invisible Walls/StaticBody2D/Area2D" to="Invisible Walls/StaticBody2D" method="_on_Area2D_body_entered"]
 

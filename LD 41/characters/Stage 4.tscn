@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/Stage 4.gd" type="Script" id=1]
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://characters/Spike-AllDeath.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/Break Block.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/Exit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/DogFood.tscn" type="PackedScene" id=8]
 
 [node name="Stage 4" type="Node"]
 
@@ -190,5 +191,9 @@ position = Vector2( 302, 156.5 )
 [node name="Exit" parent="." index="5" instance=ExtResource( 7 )]
 
 path = "res://characters/Stage 5.tscn"
+
+[node name="Temp Spike" parent="." index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 284.907, 124.947 )
 
 
