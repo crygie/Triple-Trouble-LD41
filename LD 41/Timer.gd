@@ -5,6 +5,7 @@ var gameEnd = false
 var time_start = 0
 var time_now = 0
 var dogFood = 0
+var deaths = 0
 
 func _ready():
 	set_process(true)
@@ -12,7 +13,8 @@ func _ready():
 func _process(delta):
 	if gameStart:
 		time_start = OS.get_unix_time()
-		print("The timer is working boys")
+		dogFood = 0
+		deaths = 0
 		gameStart = false
 
 func getTime():
@@ -21,4 +23,4 @@ func getTime():
 	var minutes = elapsed / 60
 	var seconds = elapsed % 60
 	var str_elapsed = "%02d : %02d" % [minutes, seconds]
-	print (str_elapsed)
+	return str_elapsed

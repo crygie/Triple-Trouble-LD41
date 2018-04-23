@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://characters/Credits.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Tiles/Untitled-1.png" type="Texture" id=2]
+[ext_resource path="res://fornonsaws.gd" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 531.614, 1416.22, 0, 0, 0, 0, 531.614, -595.558 )
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 62.4012
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 124.178
+
+[node name="Credits" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 94.8247, 54.2642 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Path2D" type="Path2D" parent="." index="1"]
+
+curve = SubResource( 1 )
+script = ExtResource( 3 )
+saw_speed = 40
+
+[node name="test" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( 531.614, 1416.22 )
+rotation = -1.5708
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.0
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Path2D/test" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="Path2D/test/KinematicBody2D" index="0"]
+
+position = Vector2( 284.016, -15.1782 )
+rotation = 1.5708
+scale = Vector2( 0.545419, 0.545419 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/test/KinematicBody2D" index="1"]
+
+position = Vector2( 12.0587, 30.1467 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 500.437, -18.0881 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+

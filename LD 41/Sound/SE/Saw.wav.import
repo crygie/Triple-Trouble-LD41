@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Saw.wav-827b7e1486ebf5c972f807b62c0820f7.sample"
+
+[deps]
+
+source_file="res://Sound/SE/Saw.wav"
+source_md5="60804ad702527e6cea82907d0dd1c90a"
+
+dest_files=[ "res://.import/Saw.wav-827b7e1486ebf5c972f807b62c0820f7.sample" ]
+dest_md5="d546589a6e72024cfdea8f54da97de31"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Keyring.wav-46c854f25cc1fb893a837d65db846b41.sample"
+
+[deps]
+
+source_file="res://Sound/SE/Keyring.wav"
+source_md5="94ac69216bd6ad79929ca9badf099180"
+
+dest_files=[ "res://.import/Keyring.wav-46c854f25cc1fb893a837d65db846b41.sample" ]
+dest_md5="ea8b03ae0829a2f39fd37c499428fac8"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

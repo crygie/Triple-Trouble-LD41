@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/Break Block.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Traps/Break Block.png" type="Texture" id=2]
+[ext_resource path="res://characters/BreakBlockPart.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,7 +16,7 @@ extents = Vector2( 15.8913, 4.7358 )
 
 [node name="Break Block" type="StaticBody2D"]
 
-position = Vector2( 32, 17.5 )
+position = Vector2( 253.682, 157.623 )
 scale = Vector2( 2.09375, 1 )
 input_pickable = false
 collision_layer = 1
@@ -57,6 +58,8 @@ audio_bus_name = "Master"
 position = Vector2( 0, -10.5123 )
 scale = Vector2( 1, 1.26436 )
 shape = SubResource( 2 )
+
+[node name="BreakBlockPart" parent="." index="3" instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

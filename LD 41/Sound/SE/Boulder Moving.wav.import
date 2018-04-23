@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Boulder Moving.wav-7acff29874506e832d94b7d45588e860.sample"
+
+[deps]
+
+source_file="res://Sound/SE/Boulder Moving.wav"
+source_md5="2269e4b70539cc256811b34c8737d618"
+
+dest_files=[ "res://.import/Boulder Moving.wav-7acff29874506e832d94b7d45588e860.sample" ]
+dest_md5="c1ceac69c1158280cf24362838617bca"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

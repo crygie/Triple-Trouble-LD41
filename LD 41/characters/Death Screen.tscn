@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/Death Screen.gd" type="Script" id=1]
-[ext_resource path="res://Targa.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://characters/Path2D.gd" type="Script" id=2]
+[ext_resource path="res://Targa.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="Curve2D" id=1]
 
-size = 36
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 512, 480, 0, 0, 0, 0, 512, 256 )
+}
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 64
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Death Screen" type="CanvasLayer" index="0"]
+[node name="Death Screen" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -20,24 +28,42 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="Try Again" type="Label" parent="." index="0"]
+[node name="Path2D" type="Path2D" parent="." index="0"]
+
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+saw_speed = 110
+
+[node name="test" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( 512, 480 )
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Path2D/test" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 320.0
-margin_top = 256.0
-margin_right = 700.0
-margin_bottom = 305.0
+margin_left = -461.0
+margin_right = 474.0
+margin_bottom = 86.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "PRESS JUMP TO TRY AGAIN"
+custom_fonts/font = SubResource( 2 )
+text = "Press the Jump Button to Restart"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

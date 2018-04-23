@@ -10,7 +10,4 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.action_press("reload"):
-		print("fuck a you")
-		reload_current_scene()
 	pass

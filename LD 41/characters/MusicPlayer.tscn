@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sound/Music/MainMusic.ogg" type="AudioStream" id=1]
+[ext_resource path="res://characters/MusicPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Sound/Music/Spike.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sound/SE/Keyring.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sound/SE/OpenDoor.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sound/SE/Boulder Moving.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sound/SE/Saw.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sound/SE/Platform breaking.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sound/SE/Munch.wav" type="AudioStream" id=9]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" index="0"]
+
+stream = ExtResource( 1 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 2 )
+
+[node name="Spike" type="AudioStreamPlayer" parent="." index="0"]
+
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Key" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 4 )
+volume_db = -5.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Door" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Boulder" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Saw" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 7 )
+volume_db = -25.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Platform" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 8 )
+volume_db = -20.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Munch" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 9 )
+volume_db = -5.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

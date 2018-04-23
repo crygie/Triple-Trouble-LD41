@@ -52,6 +52,8 @@ __meta__ = {
 
 [node name="Pit Trap" parent="." index="2" instance=ExtResource( 3 )]
 
+isPit = 1
+
 [node name="Break Blocks" type="Node" parent="." index="3"]
 
 editor/display_folded = true

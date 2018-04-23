@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 137, -23 )
+position = Vector2( 127.956, -4.91197 )
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
@@ -44,101 +44,138 @@ __meta__ = {
 
 [node name="Pit Trap" parent="." index="2" instance=ExtResource( 4 )]
 
-[node name="Spikes" type="Node" parent="." index="3"]
+isPit = 1
 
-editor/display_folded = true
+[node name="Spikes" type="Node" parent="." index="3"]
 
 [node name="Temp Spike" parent="Spikes" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 79, 48 )
+rotation = 1.5708
+isPit = 0
 
 [node name="Temp Spike5" parent="Spikes" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 367, 241 )
+position = Vector2( 367.969, 241.194 )
+isPit = 0
 
 [node name="Temp Spike6" parent="Spikes" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 464, 335 )
+position = Vector2( 464.214, 336.671 )
+rotation = -1.5708
+isPit = 0
 
 [node name="Temp Spike11" parent="Spikes" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 497.149, 309.217 )
+position = Vector2( 495.864, 305.49 )
+isPit = 0
 
 [node name="Temp Spike7" parent="Spikes" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 688, 304 )
+isPit = 0
 
 [node name="Temp Spike8" parent="Spikes" index="5" instance=ExtResource( 5 )]
 
-position = Vector2( 786, 270 )
+position = Vector2( 783.86, 270.476 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike9" parent="Spikes" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( 818, 208 )
+position = Vector2( 815.146, 207.762 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike10" parent="Spikes" index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 659, 336 )
+position = Vector2( 658.185, 336 )
+rotation = -1.5708
+isPit = 0
 
 [node name="Temp Spike12" parent="Spikes" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 945, 143 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike13" parent="Spikes" index="9" instance=ExtResource( 5 )]
 
-position = Vector2( 718, 79.7723 )
+position = Vector2( 720.108, 80.0358 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike14" parent="Spikes" index="10" instance=ExtResource( 5 )]
 
-position = Vector2( 593, 177 )
+position = Vector2( 593.9, 176.175 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike15" parent="Spikes" index="11" instance=ExtResource( 5 )]
 
-position = Vector2( 562, 178 )
+position = Vector2( 562, 176.155 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike16" parent="Spikes" index="12" instance=ExtResource( 5 )]
 
-position = Vector2( 976, 48 )
+position = Vector2( 980.049, 47.4755 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike17" parent="Spikes" index="13" instance=ExtResource( 5 )]
 
-position = Vector2( 947, 47 )
+position = Vector2( 948.077, 47.5245 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike18" parent="Spikes" index="14" instance=ExtResource( 5 )]
 
-position = Vector2( 916, 46 )
+position = Vector2( 916.175, 47.5734 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike20" parent="Spikes" index="15" instance=ExtResource( 5 )]
 
-position = Vector2( 560, 115 )
+position = Vector2( 559.476, 115.35 )
+isPit = 0
 
 [node name="Temp Spike21" parent="Spikes" index="16" instance=ExtResource( 5 )]
 
-position = Vector2( 593, 116 )
+position = Vector2( 591.077, 115.301 )
+isPit = 0
 
 [node name="Temp Spike22" parent="Spikes" index="17" instance=ExtResource( 5 )]
 
-position = Vector2( 336, 273 )
+position = Vector2( 335.96, 272.806 )
+rotation = -1.5708
+isPit = 0
 
 [node name="Temp Spike23" parent="Spikes" index="18" instance=ExtResource( 5 )]
 
-position = Vector2( 366, 305 )
+position = Vector2( 367.743, 304.031 )
+rotation = 3.14159
+isPit = 0
 
 [node name="Temp Spike2" parent="Spikes" index="19" instance=ExtResource( 5 )]
 
-position = Vector2( 78.5, 79 )
+position = Vector2( 78.7146, 78.7854 )
+rotation = 1.5708
+isPit = 0
 
 [node name="Temp Spike3" parent="Spikes" index="20" instance=ExtResource( 5 )]
 
-position = Vector2( 175.5, 48 )
+position = Vector2( 176.403, 47.7854 )
+rotation = -1.5708
+isPit = 0
 
 [node name="Temp Spike4" parent="Spikes" index="21" instance=ExtResource( 5 )]
 
-position = Vector2( 175, 79.5 )
+position = Vector2( 176.547, 79.9293 )
+rotation = -1.5708
+isPit = 0
 
 [node name="Breakable Platforms" type="Node" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="Break Block" parent="Breakable Platforms" index="0" instance=ExtResource( 6 )]
 

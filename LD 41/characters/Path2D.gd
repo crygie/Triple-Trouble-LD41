@@ -9,4 +9,5 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	
 	$test.set_offset($test.get_offset() + saw_speed * delta)

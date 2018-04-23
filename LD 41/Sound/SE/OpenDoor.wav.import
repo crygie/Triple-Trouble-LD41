@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/OpenDoor.wav-6ce77bdfd27fb14248b62176b2dc778c.sample"
+
+[deps]
+
+source_file="res://Sound/SE/OpenDoor.wav"
+source_md5="4b1df98e34dcb48997d9cad04dc0b69f"
+
+dest_files=[ "res://.import/OpenDoor.wav-6ce77bdfd27fb14248b62176b2dc778c.sample" ]
+dest_md5="aa291dbed6fda422d24ebac9eec342d0"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

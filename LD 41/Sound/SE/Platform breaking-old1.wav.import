@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Platform breaking-old1.wav-011e23de0dcb4356ddee83d24e0ca382.sample"
+
+[deps]
+
+source_file="res://Sound/SE/Platform breaking-old1.wav"
+source_md5="c972372693dc40feaf0fe6de554b2f4f"
+
+dest_files=[ "res://.import/Platform breaking-old1.wav-011e23de0dcb4356ddee83d24e0ca382.sample" ]
+dest_md5="fc8136f4cd41639087834366cabc8cd2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

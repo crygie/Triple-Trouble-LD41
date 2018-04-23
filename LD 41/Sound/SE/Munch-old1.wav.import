@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Munch-old1.wav-fa807c827226781b5f9c547ec911a240.sample"
+
+[deps]
+
+source_file="res://Sound/SE/Munch-old1.wav"
+source_md5="fd9b80e0c35839a7f7b58b43bb1b95f5"
+
+dest_files=[ "res://.import/Munch-old1.wav-fa807c827226781b5f9c547ec911a240.sample" ]
+dest_md5="63b48537a45e69e02b6dd38a82c6cfc9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

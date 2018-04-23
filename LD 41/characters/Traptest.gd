@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+export var isPit = 0
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -16,4 +17,6 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
+		if(isPit == 0):
+			MusicPlayer.playEffect(0)
 		body.death()

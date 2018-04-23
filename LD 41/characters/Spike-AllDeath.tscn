@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Traptest.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Traps/Spike Tile.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,11 +29,12 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
+isPit = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.707031, 0, 0, 1 )
-position = Vector2( -9.53674e-07, 9.53674e-07 )
+position = Vector2( -0.0638809, 0.0638809 )
+scale = Vector2( 1.98756, 1.98756 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
@@ -49,12 +50,14 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
+modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 0.0595627, -0.0574188 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
+visible = false
 position = Vector2( -0.339394, 3.3378 )
 scale = Vector2( 3.03666, 1 )
 shape = SubResource( 2 )

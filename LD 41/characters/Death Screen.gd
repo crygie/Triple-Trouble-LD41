@@ -12,5 +12,8 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
+func _process(delta):
+	if Input.is_action_just_pressed("jump_key"):
+		get_tree().reload_current_scene()
+	pass
 

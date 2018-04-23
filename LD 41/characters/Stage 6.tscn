@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://JungleTileSet.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://characters/BoulderTrigger.gd" type="Script" id=8]
 [ext_resource path="res://characters/Boulder.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/DogFood.tscn" type="PackedScene" id=10]
+[ext_resource path="res://characters/Exit.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -59,37 +60,46 @@ __meta__ = {
 
 [node name="Pit Trap" parent="." index="2" instance=ExtResource( 3 )]
 
+isPit = 1
+
 [node name="Spikes" type="Node" parent="." index="3"]
 
 editor/display_folded = true
 
 [node name="Temp Spike" parent="Spikes" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( 815.851, 496.396 )
+position = Vector2( 816.009, 496.112 )
+rotation = 1.5708
 
 [node name="Temp Spike8" parent="Spikes" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 369, 559 )
+position = Vector2( 367.861, 560.854 )
+rotation = 1.5708
 
 [node name="Temp Spike9" parent="Spikes" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 175, 337 )
+position = Vector2( 175.969, 336.031 )
+rotation = 1.5708
 
 [node name="Temp Spike10" parent="Spikes" index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 112, 337 )
+position = Vector2( 112, 336.031 )
+rotation = -1.5708
 
 [node name="Temp Spike2" parent="Spikes" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 815.772, 334.641 )
+rotation = 1.5708
 
 [node name="Temp Spike4" parent="Spikes" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 753.911, 496.158 )
+position = Vector2( 752.225, 496.12 )
+rotation = -1.5708
 
 [node name="Temp Spike5" parent="Spikes" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( 785.762, 526.782 )
+position = Vector2( 784.815, 526.782 )
+rotation = 3.14159
 
 [node name="Breakable Floor" type="Node" parent="." index="4"]
 
@@ -159,7 +169,8 @@ saw_speed = 400
 
 [node name="Path2D4" parent="Saws" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 248.848, 393.788 )
+position = Vector2( 248.848, 394.788 )
+_sections_unfolded = [ "Transform" ]
 saw_speed = 300
 
 [node name="Path2D5" parent="Saws" index="3" instance=ExtResource( 7 )]
@@ -249,6 +260,11 @@ can_sleep = false
 [node name="Temp Spike2" parent="." index="9" instance=ExtResource( 10 )]
 
 position = Vector2( 82.3301, 429.426 )
+
+[node name="Exit" parent="." index="10" instance=ExtResource( 11 )]
+
+position = Vector2( 1039.63, 79.9455 )
+path = "res://characters/Ending.tscn"
 
 [connection signal="body_entered" from="Invisible Walls/StaticBody2D/Area2D" to="Invisible Walls/StaticBody2D" method="_on_Area2D_body_entered"]
 
