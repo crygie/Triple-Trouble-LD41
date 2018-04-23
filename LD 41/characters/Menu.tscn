@@ -19,7 +19,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Menu" type="CanvasLayer" index="0"]
+[node name="Menu" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -34,10 +34,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 192.0
-margin_top = 96.0
-margin_right = 811.0
-margin_bottom = 192.0
+margin_left = -32.0
+margin_top = 32.0
+margin_right = 1087.0
+margin_bottom = 207.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -45,7 +45,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "JOHNNY AND FLYIN RYAN"
+text = "THE ADVENTURE OF JOHNNY 
+		AND SCHNIBLITS"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -59,9 +60,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 288.0
+margin_left = 264.0
 margin_top = 512.0
-margin_right = 700.0
+margin_right = 780.0
 margin_bottom = 556.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -70,7 +71,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-text = "PRESS SPACE/A (XBOX) TO START"
+text = "PRESS SPACE/A (XBOX)/X (PS4) TO START"
+align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

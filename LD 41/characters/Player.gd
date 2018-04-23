@@ -14,9 +14,10 @@ var played = false
 
 func _ready():
 	add_to_group("player")
+	$Blood.hide()
 
 func death():
-	hide()
+	$Sprite.hide()
 	isDead = true
 	if played == false:
 		gameTimer.deaths += 1
@@ -25,6 +26,8 @@ func death():
 		played = true
 		var deathscreen = deathScreen.instance()
 		add_child(deathscreen)
+		$Blood.show()
+		$Blood.restart()
 	#queue_free()
 
 func jump():

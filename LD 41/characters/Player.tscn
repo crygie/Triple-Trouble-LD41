@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://characters/Player.gd" type="Script" id=1]
 [ext_resource path="res://characters/Death Screen.tscn" type="PackedScene" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://fornonsaws.gd" type="Script" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://characters/flypet.gd" type="Script" id=6]
-[ext_resource path="res://sprites/Player/idle/idle0.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Player/idle0.png" type="Texture" id=7]
 [ext_resource path="res://sprites/Player/walking/walking0.png" type="Texture" id=8]
 [ext_resource path="res://sprites/Player/walking/walking1.png" type="Texture" id=9]
 [ext_resource path="res://sprites/Player/walking/walking2.png" type="Texture" id=10]
@@ -44,6 +44,52 @@ animations = [ {
 "name": "walking",
 "speed": 6.5
 } ]
+
+[sub_resource type="CanvasItemMaterial" id=5]
+
+render_priority = 0
+blend_mode = 0
+light_mode = 0
+
+[sub_resource type="ParticlesMaterial" id=6]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 23.87
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 2.0
+scale_random = 0.0
+color = Color( 0.976563, 0, 0, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Scale" ]
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -109,5 +155,28 @@ frames = SubResource( 4 )
 animation = "idle"
 playing = true
 _sections_unfolded = [ "Transform" ]
+
+[node name="Blood" type="Particles2D" parent="." index="3"]
+
+material = SubResource( 5 )
+emitting = false
+amount = 500
+lifetime = 31.0
+one_shot = true
+preprocess = 0.0
+speed_scale = 23.87
+explosiveness = 0.95
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 6 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Time", "Transform", "Visibility", "Z Index" ]
 
 

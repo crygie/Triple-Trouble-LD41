@@ -7,7 +7,7 @@
 [ext_resource path="res://characters/Exit.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/DogFood.tscn" type="PackedScene" id=6]
 
-[node name="Stage 2" type="Node" index="0"]
+[node name="Stage 2" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -49,55 +49,45 @@ editor/display_folded = true
 [node name="Temp Spike" parent="Spikes" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 464.044, 240.708 )
-isPit = 0
 
 [node name="Temp Spike7" parent="Spikes" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 816.027, 273.052 )
-isPit = 0
 
 [node name="Temp Spike8" parent="Spikes" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 849.323, 274.004 )
-isPit = 0
 
 [node name="Temp Spike9" parent="Spikes" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 879.765, 273.052 )
-isPit = 0
 
 [node name="Temp Spike10" parent="Spikes" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 908.304, 274.004 )
-isPit = 0
 
 [node name="Temp Spike2" parent="Spikes" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 495.881, 240.708 )
-isPit = 0
 
 [node name="Temp Spike3" parent="Spikes" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 527.468, 240.708 )
-isPit = 0
 
 [node name="Temp Spike4" parent="Spikes" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 528.167, 47.6004 )
 rotation = 3.14159
-isPit = 0
 
 [node name="Temp Spike5" parent="Spikes" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 496, 47.6004 )
 rotation = 3.14159
-isPit = 0
 
 [node name="Temp Spike6" parent="Spikes" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 463.832, 48.2997 )
 rotation = 3.14159
-isPit = 0
 
 [node name="Exit" parent="." index="4" instance=ExtResource( 5 )]
 

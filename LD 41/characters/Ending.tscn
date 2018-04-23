@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://JungleTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/Path2D.gd" type="Script" id=2]
 [ext_resource path="res://characters/PlayerForEndingScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Targa.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://characters/LabelAtEnd.gd" type="Script" id=5]
+[ext_resource path="res://characters/startwalking.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/stopwalking.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -241,6 +243,15 @@ audio_bus_name = "Master"
 position = Vector2( 480, 160 )
 scale = Vector2( 1.87143, 0.957143 )
 shape = SubResource( 3 )
+
+[node name="startwalking" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( -32, 512 )
+scale = Vector2( 1, 5 )
+
+[node name="stopwalking" parent="." index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 544, 512 )
 
 [connection signal="body_entered" from="Congrats/Area2D" to="Congrats" method="_on_Area2D_body_entered"]
 

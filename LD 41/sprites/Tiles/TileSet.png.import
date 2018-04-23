@@ -7,10 +7,10 @@ path="res://.import/TileSet.png-0bc398000c0bf0950d524f2d41d0d8fa.stex"
 [deps]
 
 source_file="res://sprites/Tiles/TileSet.png"
-source_md5="8fe0ace3f8c26c9829d462327895774f"
+source_md5="87337d34ddd2057c4e916889333b9dc9"
 
 dest_files=[ "res://.import/TileSet.png-0bc398000c0bf0950d524f2d41d0d8fa.stex" ]
-dest_md5="a771ceb058bd6706b14a7a1501b83128"
+dest_md5="91d379e287bdf214f7437991dc85509e"
 
 [params]
 
