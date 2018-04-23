@@ -6,6 +6,7 @@ var time_start = 0
 var time_now = 0
 var dogFood = 0
 var deaths = 0
+var bonusComplete = false
 
 func _ready():
 	set_process(true)
@@ -15,6 +16,7 @@ func _process(delta):
 		time_start = OS.get_unix_time()
 		dogFood = 0
 		deaths = 0
+		bonusComplete = false
 		gameStart = false
 
 func getTime():

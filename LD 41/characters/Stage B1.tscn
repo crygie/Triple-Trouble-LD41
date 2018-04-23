@@ -1,0 +1,223 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://JungleTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://characters/Pit Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Exit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/Upgarded Saws.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/Spike-AllDeath.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/Break Block.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/Key.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/Set Bonus Complete.tscn" type="PackedScene" id=10]
+
+[node name="Stage B1" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 61.6308, -17.0133 )
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+position = Vector2( -96, -32 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -393213, 3, 0, -393210, 3, 0, -327677, 3, 0, -327674, 3, 0, -262141, 3, 0, -262138, 3, 0, -196605, 3, 0, -196602, 3, 0, -131069, 3, 0, -131066, 3, 0, -65533, 3, 0, -65530, 3, 0, 3, 3, 0, 6, 3, 0, 65539, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 1, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 131075, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, 131097, 3, 0, 131106, 3, 0, 196611, 3, 0, 196617, 3, 0, 196618, 3, 0, 196619, 3, 0, 196633, 3, 0, 196642, 3, 0, 262147, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262169, 3, 0, 262178, 3, 0, 327683, 3, 0, 327684, 1, 0, 327685, 1, 0, 327686, 2, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 2, 0, 327701, 0, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 3, 0, 327714, 3, 0, 393219, 3, 0, 393225, 3, 0, 393226, 3, 0, 393227, 3, 0, 393228, 2, 0, 393231, 3, 0, 393241, 3, 0, 393250, 3, 0, 458755, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458767, 3, 0, 458777, 3, 0, 458786, 3, 0, 524291, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524303, 3, 0, 524313, 3, 0, 524322, 3, 0, 589827, 3, 0, 589830, 0, 0, 589831, 1, 0, 589832, 1, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589839, 3, 0, 589849, 3, 0, 589858, 3, 0, 655363, 3, 0, 655369, 3, 0, 655370, 3, 0, 655371, 3, 0, 655374, 0, 0, 655375, 3, 0, 655385, 3, 0, 655394, 3, 0, 720899, 3, 0, 720905, 3, 0, 720906, 3, 0, 720907, 3, 0, 720911, 3, 0, 720921, 3, 0, 720930, 3, 0, 786435, 3, 0, 786441, 3, 0, 786442, 3, 0, 786443, 3, 0, 786447, 3, 0, 786457, 3, 0, 786466, 3, 0, 851971, 3, 0, 851972, 1, 0, 851973, 1, 0, 851974, 2, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851983, 3, 0, 851993, 3, 0, 917507, 3, 0, 917513, 3, 0, 917514, 3, 0, 917515, 3, 0, 917516, 2, 0, 917519, 3, 0, 917529, 3, 0, 983043, 3, 0, 983055, 3, 0, 1048579, 3, 0, 1048591, 3, 0, 1048610, 1, 0, 1114115, 3, 0, 1114127, 3, 0, 1114146, 3, 0, 1179651, 3, 0, 1179655, 0, 0, 1179656, 2, 0, 1179658, 1, 0, 1179660, 0, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 3, 0, 1179665, 0, 0, 1179666, 1, 0, 1179667, 2, 0, 1179669, 0, 0, 1179670, 2, 0, 1179673, 1, 0, 1179682, 3, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pit Trap" parent="." index="2" instance=ExtResource( 3 )]
+
+isPit = 0
+
+[node name="Exit" parent="." index="3" instance=ExtResource( 4 )]
+
+path = "res://characters/Ending.tscn"
+
+[node name="Saws" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Path2D" parent="Saws" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -11.4245, 98.5054 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 170
+
+[node name="Path2D3" parent="Saws" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( -11.4245, 336.766 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 170
+
+[node name="Path2D2" parent="Saws" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 225.933, 209.513 )
+rotation = 4.71239
+_sections_unfolded = [ "Transform" ]
+saw_speed = 170
+
+[node name="Path2D4" parent="Saws" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 243.629, 753.696 )
+_sections_unfolded = [ "Transform" ]
+saw_speed = 450
+
+[node name="Path2D5" parent="Saws" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 455.38, 180.913 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 350
+
+[node name="Path2D7" parent="Saws" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 455.38, 311.509 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 350
+
+[node name="Path2D6" parent="Saws" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 668.959, 242.13 )
+rotation = -1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 350
+
+[node name="Path2D8" parent="Saws" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 668.959, 374.086 )
+rotation = -1.5708
+_sections_unfolded = [ "Transform" ]
+saw_speed = 350
+
+[node name="Spikes" type="Node" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Temp Spike7" parent="Spikes" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 368.228, 336.168 )
+rotation = -1.5708
+
+[node name="Temp Spike11" parent="Spikes" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 976.307, 496.103 )
+rotation = -1.5708
+
+[node name="Temp Spike8" parent="Spikes" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 368.228, 368.131 )
+rotation = -1.5708
+
+[node name="Temp Spike9" parent="Spikes" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 368.228, 400.093 )
+rotation = -1.5708
+
+[node name="Temp Spike10" parent="Spikes" index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 368.228, 432.249 )
+rotation = -1.5708
+
+[node name="Temp Spike4" parent="Spikes" index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 303.695, 272.056 )
+rotation = 1.5708
+
+[node name="Temp Spike12" parent="Spikes" index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 303.695, 303.603 )
+rotation = 1.5708
+
+[node name="Temp Spike5" parent="Spikes" index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 303.505, 239.752 )
+rotation = 1.5708
+
+[node name="Temp Spike6" parent="Spikes" index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 303.449, 208.058 )
+rotation = 1.5708
+
+[node name="Temp Spike13" parent="Spikes" index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 303.449, 208.058 )
+rotation = 1.5708
+
+[node name="Temp Spike14" parent="Spikes" index="10" instance=ExtResource( 6 )]
+
+position = Vector2( 367.579, 144.704 )
+rotation = -1.5708
+
+[node name="Temp Spike15" parent="Spikes" index="11" instance=ExtResource( 6 )]
+
+position = Vector2( 367.579, 176.41 )
+rotation = -1.5708
+
+[node name="Temp Spike3" parent="Spikes" index="12" instance=ExtResource( 6 )]
+
+position = Vector2( 305.096, 48.1735 )
+rotation = 1.5708
+
+[node name="Break Blocks" type="Node" parent="." index="6"]
+
+editor/display_folded = true
+
+[node name="Break Block" parent="Break Blocks" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 65.489, 47.0605 )
+
+[node name="Break Block2" parent="Break Blocks" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 866.749, 471.497 )
+
+[node name="Break Block3" parent="Break Blocks" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 953.41, 339.959 )
+
+[node name="Break Block4" parent="Break Blocks" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 770.606, 273.448 )
+
+[node name="Break Block5" parent="Break Blocks" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 956.243, 193.834 )
+
+[node name="Break Block6" parent="Break Blocks" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 769.718, 146.394 )
+
+[node name="Temp Spike" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 1007.04, 431.715 )
+scale = Vector2( 0.5, 1.49795 )
+
+[node name="Temp Spike2" parent="." index="8" instance=ExtResource( 9 )]
+
+position = Vector2( 752.442, 113.826 )
+
+[node name="Set Bonus Complete" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 1027.88, 427.819 )
+scale = Vector2( 1, 1.46477 )
+
+

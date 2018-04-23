@@ -1,19 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/Traptest.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Traps/Spike Tile.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.9404, 31.9426 )
+points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
+extents = Vector2( 31.491, 7.61041 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
 extents = Vector2( 0.111766, 3.3378 )
 
-[node name="Temp Spike" type="StaticBody2D"]
+[node name="Temp Spike" type="StaticBody2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -26,9 +31,6 @@ friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 isPit = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
@@ -50,17 +52,23 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-modulate = Color( 0, 0, 0, 0 )
-position = Vector2( 0.0595627, -0.0574188 )
+position = Vector2( 1.04577, -0.0224519 )
+scale = Vector2( 3.5459, 3.12006 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 1.14441e-05, 23.7964 )
+scale = Vector2( 1, 1.03237 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 visible = false
 position = Vector2( -0.339394, 3.3378 )
 scale = Vector2( 3.03666, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
