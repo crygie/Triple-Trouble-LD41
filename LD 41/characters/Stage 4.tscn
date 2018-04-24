@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/DogFood.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sprites/Tiles/background.png" type="Texture" id=9]
 
-[node name="Stage 4" type="Node"]
+[node name="Stage 4" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

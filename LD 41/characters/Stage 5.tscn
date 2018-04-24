@@ -186,7 +186,7 @@ path = "res://characters/Stage 6.tscn"
 
 [node name="Temp Spike3" parent="." index="8" instance=ExtResource( 11 )]
 
-position = Vector2( 807.42, 277.108 )
+position = Vector2( 808.165, 279.621 )
 
 [node name="background" type="Sprite" parent="." index="9"]
 
@@ -194,5 +194,8 @@ position = Vector2( 512, 288 )
 z_index = -1
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 
