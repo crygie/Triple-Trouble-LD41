@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://JungleTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://characters/Path2D.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://characters/LabelAtEnd.gd" type="Script" id=5]
 [ext_resource path="res://characters/startwalking.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/stopwalking.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/StartVictoryMusic.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sprites/Tiles/background.png" type="Texture" id=9]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -28,7 +30,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 6.78522, 14.6269 )
 
-[node name="Ending" type="Node" index="0"]
+[node name="Ending" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -71,6 +73,8 @@ loop = false
 lookahead = 4.0
 
 [node name="Player" parent="Path2D/test" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -0.000221252, 0 )
 
 [node name="Congrats" type="Label" parent="." index="2"]
 
@@ -252,6 +256,18 @@ scale = Vector2( 1, 5 )
 [node name="stopwalking" parent="." index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 544, 512 )
+
+[node name="StartVictoryMusic" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( -32, 512 )
+scale = Vector2( 1, 2 )
+
+[node name="background" type="Sprite" parent="." index="9"]
+
+position = Vector2( 512, 288 )
+z_index = -1
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Z Index" ]
 
 [connection signal="body_entered" from="Congrats/Area2D" to="Congrats" method="_on_Area2D_body_entered"]
 

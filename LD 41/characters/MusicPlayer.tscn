@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sound/Music/MainMusic.ogg" type="AudioStream" id=1]
 [ext_resource path="res://characters/MusicPlayer.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sound/SE/Saw.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sound/SE/Platform breaking.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sound/SE/Munch.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sound/Music/happynes.ogg" type="AudioStream" id=10]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
 
@@ -71,6 +72,14 @@ bus = "Master"
 
 stream = ExtResource( 9 )
 volume_db = -20.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Victory" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 10 )
+volume_db = -30.0
 autoplay = false
 mix_target = 0
 bus = "Master"

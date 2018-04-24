@@ -12,16 +12,16 @@ func _ready():
 func _process(delta):
 	match gameTimer.dogFood:
 		0:
-			scale = Vector2(.1,.1)
-		1:
 			scale = Vector2(.2,.2)
-		2:
-			scale = Vector2(.25,.25)
-		3:
-			scale = Vector2(.3,.3)
-		4:
-			scale = Vector2(.35,.35)
-		5:
+		1:
 			scale = Vector2(.4,.4)
+		2:
+			scale = Vector2(.5,.5)
+		3:
+			scale = Vector2(.6,.6)
+		4:
+			scale = Vector2(.7,.7)
+		5:
+			scale = Vector2(.8,.8)
 		6:
-			scale = Vector2(.45,.45)
+			scale = Vector2(1,1)

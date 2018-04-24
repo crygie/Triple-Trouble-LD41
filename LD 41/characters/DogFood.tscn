@@ -1,97 +1,21 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/DogFood.gd" type="Script" id=1]
-[ext_resource path="res://characters/Path2D.gd" type="Script" id=2]
-[ext_resource path="res://Untitled-1.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-
-[sub_resource type="Curve2D" id=1]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -1.23755, 17.9491, 0, 0, 0, 0, -0.0699463, -44.7334, 0, 0, 0, 0, -1.26746, 18.7328 )
-}
-
-[sub_resource type="Gradient" id=2]
-
-offsets = PoolRealArray( 0, 0.12426, 0.532544, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 0.12426, 0.12426, 0.12426, 1, 0.0532544, 0.0532544, 0.0532544, 1, 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=3]
-
-flags = 4
-gradient = SubResource( 2 )
-width = 2048
-
-[sub_resource type="Curve" id=4]
-
-min_value = 0.0
-max_value = 1.0
-bake_resolution = 100
-_data = [ Vector2( 0.00786383, 0.0810547 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=5]
-
-flags = 4
-width = 2048
-curve = SubResource( 4 )
-
-[sub_resource type="ParticlesMaterial" id=6]
-
-render_priority = 0
-trail_divisor = 1
-trail_size_modifier = SubResource( 5 )
-trail_color_modifier = SubResource( 3 )
-emission_shape = 1
-emission_sphere_radius = 1.0
-flag_align_y = true
-flag_rotate_y = true
-flag_disable_z = true
-spread = 45.0
-flatness = 0.0
-gravity = Vector3( 0, 98, 0 )
-initial_velocity = 1.0
-initial_velocity_random = 0.0
-angular_velocity = 0.5
-angular_velocity_random = 0.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 0.0
-linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
-tangential_accel = 0.0
-tangential_accel_random = 0.0
-damping = 0.0
-damping_random = 0.0
-angle = 0.0
-angle_random = 0.0
-scale = 0.5
-scale_random = 0.0
-color = Color( 1, 1, 1, 1 )
-hue_variation = 0.0
-hue_variation_random = 0.0
-anim_speed = 100.0
-anim_speed_random = 0.0
-anim_offset = 0.0
-anim_offset_random = 0.0
-anim_loop = false
-_sections_unfolded = [ "Angle", "Animation", "Emission Shape", "Flags", "Hue Variation", "Initial Velocity", "Scale", "Spread", "Trail" ]
+[ext_resource path="res://sprites/Stuff/Food/food0.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.9404, 31.9426 )
+extents = Vector2( 17.2446, 18.9396 )
 
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 0.0187378, 0.483963 )
+extents = Vector2( 0.0174255, 0.0196762 )
 
 [node name="Temp Spike" type="StaticBody2D"]
 
-position = Vector2( 233.08, 101.777 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 225.477, 102.101 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -102,68 +26,7 @@ bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Path2D" type="Path2D" parent="." index="0"]
-
-curve = SubResource( 1 )
-script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-saw_speed = 110
-
-[node name="test" type="PathFollow2D" parent="Path2D" index="0"]
-
-position = Vector2( -1.23755, 17.9491 )
-rotation = -1.55217
-offset = 0.0
-h_offset = 0.0
-v_offset = 0.0
-rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Particles2D" type="Particles2D" parent="Path2D/test" index="0"]
-
-position = Vector2( 32.9618, 0.833202 )
-rotation = 1.55853
-scale = Vector2( 0.06, 0.06 )
-emitting = false
-amount = 8
-lifetime = 1.0
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 1.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = SubResource( 6 )
-texture = ExtResource( 3 )
-normal_map = null
-h_frames = 1
-v_frames = 1
-_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
-
-modulate = Color( 0.851563, 1, 0, 1 )
-position = Vector2( -9.53674e-07, 9.53674e-07 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Area2D" type="Area2D" parent="." index="2"]
+[node name="Area2D" type="Area2D" parent="." index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -185,15 +48,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
-position = Vector2( -0.501831, 21.1804 )
-scale = Vector2( 2.30128, -1.07129 )
+position = Vector2( -1.1489, 11.1508 )
 shape = SubResource( 8 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="4"]
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="2"]
 
 position = Vector2( 1.27206, 10.2581 )
 scale = Vector2( 0.99113, 0.0981712 )
@@ -204,6 +65,10 @@ pause_particles = true
 pause_animated_sprites = true
 process_parent = false
 physics_process_parent = false
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

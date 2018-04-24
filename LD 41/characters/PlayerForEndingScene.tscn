@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://characters/PlayerForEndingScene.gd" type="Script" id=1]
 [ext_resource path="res://characters/Path2D.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Schniblits/idle0.png" type="Texture" id=3]
 [ext_resource path="res://characters/flypet.gd" type="Script" id=4]
-[ext_resource path="res://sprites/Player/idle0.png" type="Texture" id=5]
-[ext_resource path="res://sprites/Player/walking/walking0.png" type="Texture" id=6]
-[ext_resource path="res://sprites/Player/walking/walking1.png" type="Texture" id=7]
-[ext_resource path="res://sprites/Player/walking/walking2.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Player/walking/walking3.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Player/walking/walking0.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Player/walking/walking1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Player/walking/walking2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Player/walking/walking3.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Player/walking/walking4.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Player/walking/walking5.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Player/idle0.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -32,15 +34,15 @@ _data = {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walking",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "walking",
-"speed": 6.5
 } ]
 
 [node name="Player" type="KinematicBody2D"]
@@ -57,7 +59,6 @@ shape = SubResource( 1 )
 
 [node name="Path2D" type="Path2D" parent="." index="1"]
 
-editor/display_folded = true
 curve = SubResource( 2 )
 script = ExtResource( 2 )
 saw_speed = 5

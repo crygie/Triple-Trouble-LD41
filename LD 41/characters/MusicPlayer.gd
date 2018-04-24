@@ -19,6 +19,12 @@ func playEffect(effectNumber):
 			pass
 		6:  
 			$Munch.play()
+		7:
+			stop()
+			$Victory.play()
+
+func stopVictory():
+	$Victory.stop()
 
 func _ready():
 	# Called every time the node is added to the scene.

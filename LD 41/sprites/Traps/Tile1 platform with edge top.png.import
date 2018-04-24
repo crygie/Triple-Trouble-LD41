@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Tile1 platform with edge top.png-4c6d203629289bfad76f8cdfaa78d16b.stex"
+
+[deps]
+
+source_file="res://sprites/Traps/Tile1 platform with edge top.png"
+source_md5="3081d47595a9e272aa36f3c58c54983a"
+
+dest_files=[ "res://.import/Tile1 platform with edge top.png-4c6d203629289bfad76f8cdfaa78d16b.stex" ]
+dest_md5="a429bddc4c8b576622f10012aaee4b08"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

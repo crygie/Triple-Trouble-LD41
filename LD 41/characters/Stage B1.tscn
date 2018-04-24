@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://characters/Stage B1.gd" type="Script" id=1]
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://characters/Break Block.tscn" type="PackedScene" id=8]
 [ext_resource path="res://characters/Door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/Key.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sprites/Tiles/background.png" type="Texture" id=11]
 
-[node name="Stage B1" type="Node" index="0"]
+[node name="Stage B1" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -211,10 +212,18 @@ position = Vector2( 769.718, 146.394 )
 [node name="Temp Spike" parent="." index="7" instance=ExtResource( 9 )]
 
 position = Vector2( 1007.04, 431.715 )
-scale = Vector2( 0.5, 1.49795 )
+scale = Vector2( 1, 1 )
 
 [node name="Temp Spike2" parent="." index="8" instance=ExtResource( 10 )]
 
 position = Vector2( 752.442, 113.826 )
+scale = Vector2( 1, 1 )
+
+[node name="background" type="Sprite" parent="." index="9"]
+
+position = Vector2( 512, 288 )
+z_index = -1
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Z Index" ]
 
 

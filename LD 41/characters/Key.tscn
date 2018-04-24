@@ -1,7 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://characters/key.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Stuff/Key/key0.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Stuff/Key/key1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Stuff/Key/key2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Stuff/Key/key3.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Stuff/Key/key4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Stuff/Key/key5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Stuff/Key/key6.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Stuff/Key/key7.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Stuff/Key/key8.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Stuff/Key/key9.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Stuff/Key/key10.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Stuff/Key/key11.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Stuff/Key/key12.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Stuff/Key/key13.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Stuff/Key/key14.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Stuff/Key/key15.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,6 +27,15 @@ extents = Vector2( 31.9404, 31.9426 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 0.111766, 3.3378 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "key",
+"speed": 15.0
+} ]
 
 [node name="Temp Spike" type="StaticBody2D"]
 
@@ -30,14 +54,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
-
-modulate = Color( 0.664063, 0, 1, 1 )
-position = Vector2( -9.53674e-07, 9.53674e-07 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
-
-[node name="Area2D" type="Area2D" parent="." index="1"]
+[node name="Area2D" type="Area2D" parent="." index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -53,13 +70,13 @@ position = Vector2( 0.0595627, -0.0574188 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( -0.339394, 3.3378 )
 scale = Vector2( 3.03666, 1 )
 shape = SubResource( 2 )
 
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="3"]
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="2"]
 
 rect = Rect2( -10, -10, 20, 20 )
 pause_animations = true
@@ -68,6 +85,12 @@ pause_particles = true
 pause_animated_sprites = true
 process_parent = false
 physics_process_parent = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="3"]
+
+frames = SubResource( 3 )
+animation = "key"
+frame = 11
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

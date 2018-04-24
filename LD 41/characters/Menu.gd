@@ -10,4 +10,5 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("jump_key"):
 		gameTimer.gameStart = true
+		MusicPlayer.stopVictory()
 		get_tree().change_scene("res://characters/Stage 0.tscn")

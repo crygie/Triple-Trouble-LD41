@@ -6,6 +6,7 @@ extends Node
 
 func _ready():
 	gameTimer.bonusComplete = true
+	gameTimer.gameEnd = false
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

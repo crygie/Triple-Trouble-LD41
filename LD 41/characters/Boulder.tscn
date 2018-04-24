@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Boulder.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Traps/temp saw.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Traps/Boulder1.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -39,9 +39,9 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 0.261002, 0.206704 )
-scale = Vector2( 1.91406, 1.90625 )
+modulate = Color( 1, 0.929688, 0.929688, 1 )
+position = Vector2( -0.25489, -0.0465374 )
+scale = Vector2( 0.971904, 0.967939 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
@@ -54,12 +54,18 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 position = Vector2( 0.0595627, -0.0574188 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 

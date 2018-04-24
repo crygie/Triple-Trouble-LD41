@@ -8,8 +8,8 @@ func _ready():
 	add_to_group("boulder")
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
+func _process(delta):
+	$Sprite.rotation += .1
 #	# Update game logic here.
 #	pass
 

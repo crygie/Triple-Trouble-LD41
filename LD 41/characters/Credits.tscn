@@ -8,7 +8,7 @@
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 531.614, 1416.22, 0, 0, 0, 0, 531.614, -595.558 )
+"points": PoolVector2Array( 0, 0, 0, 0, 531.614, 1416.22, 0, 0, 0, 0, 531.773, -3.38788 )
 }
 
 [sub_resource type="CircleShape2D" id=2]
@@ -37,6 +37,7 @@ _sections_unfolded = [ "Visibility" ]
 curve = SubResource( 1 )
 script = ExtResource( 3 )
 saw_speed = 40
+fast_saw = 400
 
 [node name="test" type="PathFollow2D" parent="Path2D" index="0"]
 
